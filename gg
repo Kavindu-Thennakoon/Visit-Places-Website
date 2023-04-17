@@ -1,0 +1,117 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class HashTable {
+    private String[] table;
+    private int size;
+    private int count;
+
+    public HashTable(int size) {
+        this.size = size;
+        table = new String[size];
+        count = 0;
+    }
+
+    public int hash(String word) {
+        int sum = 0;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                sum += c - 'a';
+            } else if (c >= 'A' && c <= 'Z') {
+                sum += c - 'A' + 26;
+            }
+        }
+        return sum % size;
+    }
+
+    public void insert(String word) {
+        int h = hash(word);
+        int i = 0;
+        while (table[h] != null) {
+            i++;
+            h = (h + i * i) % size;
+        }
+        table[h] = word;
+        count++;
+    }
+
+    public void readInputFile(String inputFile) throws IOException {
+        Pattern pattern = Pattern.compile("[a-zA-Z]+");
+        try (BufferedReader br = new BufferedReader(new FileReader(inputFile))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                Matcher matcher = pattern.matcher(line);
+                while (matcher.find()) {
+                    String word = matcher.group().toLowerCase();
+                    insert(word);
+                }
+            }
+        }
+    }
+
+    public void writeOutputFiles(String outputFile1, String outputFile2) throws IOException {
+        try (FileWriter fw1 = new FileWriter(outputFile1); FileWriter fw2 = new FileWriter(outputFile2)) {
+            fw1.write("--------------------------------------------\n");
+            fw1.write("|Word index j|      Word     | Hash key, kj|\n");
+            fw1.write("|------------|---------------|-------------|\n");
+            for (int i = 0; i < size; i++) {
+                if (table[i] != null) {
+                    int hk = hash(table[i]);
+                    int j = 0;
+                    while (table[hk] != null && !table[hk].equals(table[i])) {
+                        j++;
+                        hk = (hk + j * j) % size;
+                    }
+                    fw1.write(String.format("|%12d|%15s|%13d|\n", j, table[i], hk));
+
+                }
+            }
+            fw1.write("--------------------------------------------\n");
+
+            // Task 2 (c)
+            fw2.write("|Word index j|        Word        |Hash key, kj|new Hash key, Qkj|Quadratic h-f, h(j, i)|\n");
+            fw2.write("|------------|--------------------|------------|-----------------|----------------------|\n");
+            for (int i = 0; i < size; i++) {
+                if (table[i] != null) {
+                    int hk = hash(table[i]);
+                    int j = 0;
+                    while (table[hk] != null && !table[hk].equals(table[i])) {
+                        j++;
+                        hk = (hk + j * j) % size;
+                    }
+
+                    // c1, c2, and c3 are set to the values specified in Task 2 (b)
+                    int c1 = 1;
+                    int c2 = 1;
+                    int c3 = 0;
+                    int Qhk = (hk + c1 * j * j + c2 * j + c3) % size;
+                    int hji = (hk + c1 * j * j + c2 * j + c3) % size;
+                    fw2.write(String.format("|%12d|%25s|%12d|%18d|%22d|\n", j, table[i], hk, Qhk, hji));
+                }
+            }
+            fw2.write("-----------------------------------------------------------------------------------------\n");
+
+        }
+    }
+
+    public static void main(String[] args) {
+        String inputFile = "file1.txt";
+        String outputFile1 = "wordsHK1.txt";
+        String outputFile2 = "wordsQHK1.txt";
+        int tableSize = 200000;
+
+        HashTable ht = new HashTable(tableSize);
+
+        try {
+            ht.readInputFile(inputFile);
+            ht.writeOutputFiles(outputFile1, outputFile2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

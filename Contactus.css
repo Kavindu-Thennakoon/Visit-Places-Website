@@ -1,0 +1,343 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 46, 46);
+    background-color: rgba(224, 217, 217, 0.863);
+}
+
+.navigation-bar  ul {
+    list-style-type: none; 
+ }
+
+ .navigation-bar  ul li {
+    float: left;
+ }
+
+ .navigation-bar  ul li a {
+    display: block;
+    background-color: #f3a615;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 22px;
+    border-style: ridge;
+    border-radius: 15%;
+    text-decoration: none;
+ }
+
+ .navigation-bar  ul li a:hover {
+   background-color: #1471eb;
+   counter-reset: rgb(255, 255, 255);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+hr{
+    width: 80%;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgb(243, 10, 100);
+    font-weight: bolder;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bolder;
+    color: maroon;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+    
+}
+.contact-items{
+    display: flex;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.call_us,.slda,.topolice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    margin: 30px auto;
+    padding: 10px 5px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 250px;
+    
+}
+.call_us{
+    height: 500px;
+    box-shadow: 0 15px 15px green;
+    border: 1px solid green;
+}
+.topolice{
+    height: 500px;
+    box-shadow: 0 15px 15px red;
+    border: 1px solid red;
+}
+
+.topolice ul  {
+   list-style-type: none; 
+}
+
+.topolice ul li {
+    text-align: center;
+}
+.slda{
+    height: 500px;
+    box-shadow: 0 15px 15px blue;
+    border: 1px solid blue;
+}
+.slda ul {
+    list-style-type: none;
+}
+
+.slda ul li {
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+button{
+    padding: 8px 16px;
+    font-size: 25px;
+    border-radius: 25px;
+    border: none;
+    margin: 15px auto;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+button:hover{
+    color: gray;
+}
+#call_us{
+    background: green;
+
+    box-shadow: 0 0 5px black;
+}
+
+a{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+.call_us a{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px rgba(73, 129, 80, 0.637);
+}
+
+.se_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin: 15vh auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 15px rgb(180, 51, 73);
+ 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+input {
+    width: 100%;
+    margin: 5px 0;
+    height: 45px;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    background: rgb(255, 255, 255);
+}
+
+textarea {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    background: rgb(255, 255, 255);
+}
+input[type=submit]{
+    margin: 10px auto;
+    width: 120px;
+    background: rgb(216, 31, 62);
+    color: white;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+background: tomato;
+}
+@media screen and (max-width:600px) {
+    .container{
+        width: 90%;
+    }
+}
+
+#footer{
+    margin:0px;
+    background-color:rgb(100, 92, 92);
+    height: 338px;
+    width:auto;
+    border-radius:8px;
+    position:relative;
+    -webkit-box-shadow: -1px 0px 10px 0 rgb(100, 93, 93);
+    -moz-box-shadow:-1px 0px 10px 0 rgb(100, 91, 91);
+    box-shadow: -1px 0px 10px 0 rgb(99, 93, 93);  
+ }
+ 
+  
+ .head1{
+    font-size: 25px;
+    text-shadow:-2px -1px 8px #fafafa;
+ }
+ 
+ .head2{
+    color: rgb(15, 15, 15);
+    text-shadow:-2px -1px 8px #FFFFFF;
+ }
+ 
+ .head3{
+    color: #f1f1f1;
+ }
+ 
+ .release {
+    color:rgb(17, 17, 17);
+    line-height:200%;
+    height:80px;
+    margin-top:30px;
+    margin-left:50px;
+    text-align:center;
+    position:absolute;
+    font-family: 'Merienda', cursive;
+ }
+ 
+ 
+ .footermenu{
+    color:rgb(16, 15, 15);
+    margin-left:400px;
+    margin-top:30px;
+    line-height:170%;
+    padding-top: 32px;
+    text-align:center;
+    font-family: 'Merienda', cursive;
+    font-size:18px;
+ }
+ 
+ .footersocaillinks{
+    color:#fff;
+    margin-left: 639px;
+    margin-top: -200px;
+    position:absolute;
+    text-align:center;
+    font-family: 'Merienda', cursive;
+    font-size:25px;
+  
+ }
+ 
+ a {
+    text-decoration: none;
+    color: #f1f1f1;
+ }
+ 
+ #contactus{
+    display:inline;
+ }
+ 
+ .contactheading1{
+    color:rgb(8, 8, 8);
+    text-shadow:-2px -1px 8px #fafafa;
+    margin-left: 940px;
+    margin-top: -215px;
+    font-family: 'Courgette', cursive;
+    font-size:30px;
+ }
+ 
+ .contactheading2{
+    color:#fff;
+    margin-left: 889px;
+    margin-top:30px; 
+    text-align:center;
+    font-family: 'Merienda', cursive;
+    font-size:16px;
+ }
+ 
+ .contactusbutton{
+    background-color:rgba(99, 104, 240, 0.857);
+    color:#000;
+    margin-left:970px;
+    margin-top:40px;
+    height:60px;
+    width:200px;
+    line-height:60px;
+    font-family: 'Merienda', cursive;
+    font-size:20px;
+    text-shadow:2px 1px 5px #000000;
+    text-align:center;
+    border-radius:10px;
+ 
+ 
+ }
+ 
+ hr{
+    margin-top:2px;
+    margin-bottom: 5px;
+    background-color:rgb(255, 255, 255); 
+ 
+ }
+ 
+ .bottom1 {
+    color: #090808;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+ 
+ }
+ 
+ .createdby{
+    color:#fff;
+    font-family: 'Courgette', cursive;
+    font-size:14px;
+    margin-left: 10px;
+    margin-top: 7px;
+  }
+ 
+ .forhackinux{
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-size: 15px;
+    margin-left: 1043px;
+    margin-top: -34px;
+    font-family: 'Courgette', cursive;
+  
+ }

@@ -1,0 +1,337 @@
+body {
+   background-image: url('img/background.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;  
+   background-size: cover;
+   width: auto;
+   height: auto;
+   margin: 0;
+}
+
+.navigation-bar  ul {
+   list-style-type: none;
+   margin: 0;
+   
+    
+ }
+
+ .navigation-bar  ul li {
+   float: left;
+ }
+
+ .navigation-bar  ul li a {
+   display: block;
+   background-color: #f3a615;
+   color: rgb(255, 255, 255);
+   font-size: 22px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   text-align: center;
+   padding: 18px 22px;
+   border-style: ridge;
+   border-radius: 15%;
+   text-decoration: none;
+ }
+
+ .navigation-bar  ul li a:hover {
+   background-color: #1814eb;
+   counter-reset: rgb(255, 255, 255);
+}
+
+.aboutus {
+   background-color: rgb(255, 255, 255);
+    box-shadow: 0 35px 35px rgb(0, 248, 21);
+    width: 900px;
+    height:450px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.aboutus h1 {
+   font-size: 55px;
+   color: mediumvioletred;
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: center;
+   background-color: wheat;
+   
+}
+
+.aboutus  h2 {
+   font-size: 35px;
+   color: rgb(194, 41, 48);
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: italic;
+   margin-left: 15px;
+}
+
+
+.aboutus  h3 {
+   font-size: 20px;
+   color: rgb(17, 16, 17);
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+   font-style: italic;
+   text-align: center;
+   margin-left: 15px;
+}
+
+
+#aboutimg  {
+      float: right;
+      border: 1px dotted black;
+      margin: 0px 0px 15px 20px;
+      width: 450px;
+      height: auto;
+   }
+   
+
+
+
+#infobox{
+   background-color: rgb(0, 0, 0);
+   width: 800px;
+   margin-left:  22%;
+   margin-right: 18%;
+   position:relative; 
+   margin-top: 100px;
+   border-radius: 20px 20px 20px 20px;
+   -moz-border-radius: 20px 20px 20px 20px;
+   -webkit-border-radius: 20px 20px 20px 20px;
+   border: 0px solid #000000;
+   -webkit-box-shadow: -1px 0px 10px 0 #000;
+   -moz-box-shadow:-1px 0px 10px 0 #000;
+   box-shadow: -1px 0px 10px 0 #000;  
+ }
+
+.line1{
+   position:absolute;
+   color: #fff;   
+   font-size: 20px;
+   margin-left: 214px; 
+   font-family: 'Merienda', cursive;
+   text-decoration:none;
+   text-align: center;
+}
+
+.sociallinks tr td{
+   width: 415px;
+   text-align: center; }
+
+
+.sunnypic{
+   border-radius: 100px;
+   height: 190px;
+   width: 184px;
+   margin-left: 110px;
+   margin-top: 120px;
+   transition: all 0.5s ease;
+   background-color:#fff;
+   padding: 6px;
+}
+
+.sunnypic:hover {
+   border-radius:40px;
+   box-shadow:0px 0px 20px #ccc 
+}
+
+
+.rahulpic{
+   border-radius: 100px;
+   height: 190px;
+   margin-left: 200px;
+   width: 190px;
+   margin-top: 120px;
+   transition: all 0.5s ease;
+   background-color:#fff;
+   padding: 6px;
+}
+ 
+.rahulpic:hover {
+   border-radius:40px;
+   box-shadow:0px 0px 20px #ccc;
+}
+
+.sunnyinfo{
+   color:#fff;
+   font-family: 'Merienda', cursive;
+   text-align: center;
+   width: 485px;
+
+}
+
+.rahulinfo{
+   color:#fff;
+   font-family: 'Merienda', cursive;
+   text-align: center;
+   width: 436px;
+}
+
+#sunnysociallinks {
+   margin-top:10px;
+   margin-left:131px;
+   display:inline-block; 
+}
+
+#rahulsociallinks {
+   display:inline-block;
+   margin-top:10px;
+   margin-left: 232px;
+}
+
+#acecoderssociallinks{
+   margin-left: 330px;
+}
+
+
+.bottomtitle{
+   color:#fff;
+   font-family: 'Merienda', cursive;
+   margin-top: 78px;
+   text-align: center;
+}
+
+
+#footer{
+   margin:0px;
+   background-color:rgb(100, 92, 92);
+   height: 338px;
+   width:auto;
+   border-radius:8px;
+   position:relative;
+   -webkit-box-shadow: -1px 0px 10px 0 rgb(100, 93, 93);
+   -moz-box-shadow:-1px 0px 10px 0 rgb(100, 91, 91);
+   box-shadow: -1px 0px 10px 0 rgb(99, 93, 93);  
+}
+
+ 
+.head1{
+   font-size: 25px;
+   text-shadow:-2px -1px 8px #fafafa;
+}
+
+.head2{
+   color: rgb(15, 15, 15);
+   text-shadow:-2px -1px 8px #FFFFFF;
+}
+
+.head3{
+   color: #f1f1f1;
+}
+
+.release {
+   color:rgb(17, 17, 17);
+   line-height:200%;
+   height:80px;
+   margin-top:30px;
+   margin-left:50px;
+   text-align:center;
+   position:absolute;
+   font-family: 'Merienda', cursive;
+}
+
+
+.footermenu{
+   color:rgb(16, 15, 15);
+   margin-left:400px;
+   margin-top:30px;
+   line-height:170%;
+   padding-top: 32px;
+   text-align:center;
+   font-family: 'Merienda', cursive;
+   font-size:18px;
+}
+
+.footersocaillinks{
+   color:#fff;
+   margin-left: 639px;
+   margin-top: -200px;
+   position:absolute;
+   text-align:center;
+   font-family: 'Merienda', cursive;
+   font-size:25px;
+ 
+}
+
+a {
+   text-decoration: none;
+   color: #f1f1f1;
+}
+
+#contactus{
+   display:inline;
+}
+
+.contactheading1{
+   color:rgb(8, 8, 8);
+   text-shadow:-2px -1px 8px #fafafa;
+   margin-left: 940px;
+   margin-top: -215px;
+   font-family: 'Courgette', cursive;
+   font-size:30px;
+}
+
+.contactheading2{
+   color:#fff;
+   margin-left: 889px;
+   margin-top:30px; 
+   text-align:center;
+   font-family: 'Merienda', cursive;
+   font-size:16px;
+}
+
+.contactusbutton{
+   background-color:rgba(99, 104, 240, 0.857);
+   color:#000;
+   margin-left:970px;
+   margin-top:40px;
+   height:60px;
+   width:200px;
+   line-height:60px;
+   font-family: 'Merienda', cursive;
+   font-size:20px;
+   text-shadow:2px 1px 5px #000000;
+   text-align:center;
+   border-radius:10px;
+
+
+}
+
+hr{
+   margin-top:2px;
+   margin-bottom: 5px;
+   background-color:rgb(255, 255, 255); 
+
+}
+
+.bottom1 {
+   color: #090808;
+   text-align: center;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: bold;
+   font-size: 15px;
+
+}
+
+.createdby{
+   color:#fff;
+   font-family: 'Courgette', cursive;
+   font-size:14px;
+   margin-left: 10px;
+   margin-top: 7px;
+ }
+
+.forhackinux{
+   color: #FFFFFF;
+   display: inline;
+   float: left;
+   font-size: 15px;
+   margin-left: 1043px;
+   margin-top: -34px;
+   font-family: 'Courgette', cursive;
+ 
+}
+
+

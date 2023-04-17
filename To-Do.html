@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pearl of the Indian Ocean</title>      
+        <link rel="stylesheet" href="To-Do.css">
+        <script src="Vue.js"></script>
+    
+    </head>
+    <body>
+    
+        <div class="navigation-bar">
+            <ul>
+                <li><a id="active" href="Home.html">Home</a></li>
+                <li><a href="TravelPlace.html">Travel Places</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="To-Do.html">To-Do List</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Contactus.html">Contact Us</a></li>
+               
+            </ul>
+        </div>
+        <br><br><br>
+    
+        <div id="app" class="container">
+            <h2>Sri Lanka (Pearl of the Indian Ocean)</h2>
+            <h1>Todo List</h1>
+    
+            <div v-if="!isEditing">
+                <input class="textbox" placeholder="Add the Tourist Places where you plan to visit....." type="text" v-model="todo">
+                <input type="submit" value="Add" @click="storeTodo">
+            </div>
+            <div v-else>
+                <input type="text" v-model="todo">
+                <input type="submit" value="Update" @click="updateTodo">
+            </div>
+    
+            <ol>
+                <li v-for="(todo, index) in todos">
+                    {{ todo }}
+                    <button @click="editTodo(index, todo)">Edit</button>
+                    <button @click="removeTodo(index)">Delete</button>
+                </li>
+            </ol>
+        </div>
+        <br><br><br><br><br><br><br>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                
+                data: {
+                    isEditing: false,
+                    todo: '',
+                    todos: [],
+                    selectedTodo: null
+                },
+                
+                methods: {
+                    storeTodo() {
+                        this.todos.push(this.todo)
+                        this.todo = ''
+                    },
+    
+                    removeTodo(index) {
+                        this.todos.splice(index, 1)
+                    },
+    
+                    updateTodo() {
+                        this.todos.splice(this.selectedIndex, 1, this.todo)
+                        this.todo = ''
+                        this.isEditing = false
+                    },
+    
+                    editTodo(index, todo) {
+                        this.isEditing = true
+                        this.todo = todo
+                        this.selectedIndex = index
+                    }
+                }
+            })
+        </script>
+
+            
+            <div id="footer"> 
+            <table class="release">
+              <tr>
+                  <th class="head1">Recent release</th>  
+              </tr>
+                     
+              <tr>
+                  <td class="head3"><b>Dalada Maligawaa</b></td>
+              </tr>
+              
+              <tr>
+                  <td class="head3"><b>Sigiriya</b> <br> <b>Yapahuwa Rock Fortress</b> </td>
+              </tr>
+            </table>
+                 
+            <table class="footermenu">
+              <tr>
+                  <th class="head1"> Menu</th> 
+              </tr>
+  
+              <tr>
+                  <td> <a href="Home.html">Home</a></td>
+              </tr>
+              
+              <tr>
+                  <td><a href="TravelPlace.html">Travel Places</a></td>
+              </tr>
+              
+              <tr>
+                  <td><a href="img_gallery.html">Image Gallery</a></td>
+              </tr>
+           
+              <tr>
+                <td><a href="To-Do.html">To-Do List</a></td>
+            </tr>
+              
+              <tr>
+                  <td><a href="Aboutus.html">About Us</a></td>
+              </tr>
+              
+              <tr>
+                  <td><a href="Contactus.html">Contact Us</a></td>
+              </tr>
+              
+            </table> 
+                       
+              <div class="footersocaillinks">
+                <h4 class="head2">Follow Us</h4>
+                  <a class="footerfblogo" href="https://www.facebook.com/"> <img src="img/facebook.png" width="40px" height="40px"</a>  
+                  <a class="footergooglepluslogo" href="http://www.google.com/"> <img src="img/google.png" width="40px" height="40px"</a>
+                  <a class="footertwitterlogo" href="https://twitter.com/"> <img src="img/twitter.png" width="40px" height="40px"</a>
+                  <a class="footeryoutubelogo" href="https://www.youtube.com/"> <img src="img/youtub.png" width="40px" height="40px"</a>
+              </div>
+                
+              <div id="contactus">
+                  <p class="contactheading1">Are you like to visit Sri lanka? </p>
+                  <p class="contactheading2">...We are waiting for you...</p>
+              </div>
+             
+              <div class="contactusbutton"><a href="tel:1912">Contact Us</a></div>
+      
+              <hr>
+              <h3 class="bottom1"><center>Sri Lanka (Pearl of the Indian Ocean)</center><h3>
+                        
+          </div>
+
+    
+    </body>
+    </html>
